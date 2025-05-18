@@ -2818,11 +2818,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/egis/MyProjects/Group-expenses-tracker/ASPProject/ASPProject.Backend/ASPProject.Backend.csproj",
+      "projectUniqueName": "/Users/egis/MyProjects/groups-expenses-tracker/ASPProject/ASPProject.Backend/ASPProject.Backend.csproj",
       "projectName": "ASPProject.Backend",
-      "projectPath": "/Users/egis/MyProjects/Group-expenses-tracker/ASPProject/ASPProject.Backend/ASPProject.Backend.csproj",
+      "projectPath": "/Users/egis/MyProjects/groups-expenses-tracker/ASPProject/ASPProject.Backend/ASPProject.Backend.csproj",
       "packagesPath": "/Users/egis/.nuget/packages/",
-      "outputPath": "/Users/egis/MyProjects/Group-expenses-tracker/ASPProject/ASPProject.Backend/obj/",
+      "outputPath": "/Users/egis/MyProjects/groups-expenses-tracker/ASPProject/ASPProject.Backend/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/egis/.nuget/NuGet/NuGet.Config"

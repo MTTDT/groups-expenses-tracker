@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Y8rNz5otijo=",
+  "dgSpecHash": "FPpvt/eLEHY=",
   "success": true,
-  "projectFilePath": "/Users/egis/MyProjects/Group-expenses-tracker/ASPProject/ASPProject.Backend/ASPProject.Backend.csproj",
+  "projectFilePath": "/Users/egis/MyProjects/groups-expenses-tracker/ASPProject/ASPProject.Backend/ASPProject.Backend.csproj",
   "expectedPackageFiles": [
     "/Users/egis/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/egis/.nuget/packages/microsoft.aspnetcore.openapi/9.0.1/microsoft.aspnetcore.openapi.9.0.1.nupkg.sha512",
