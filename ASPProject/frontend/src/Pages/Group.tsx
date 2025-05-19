@@ -26,7 +26,6 @@ export default function Group(){
                 
                 const res = await fetch(`http://localhost:5167/api/groups/${id}`)
                 const data: Group = await res.json();
-                console.log("dataa", data)
                 setGroup(data)
                 setLoadingGroup(false)
             }catch(err){
@@ -42,7 +41,6 @@ export default function Group(){
             try{
                 const res = await fetch(`http://localhost:5167/api/groups/${id}/balance`)
                 const data: number = await res.json()
-                console.log("balance", data)
                 setGroupBalance(data)
             }catch(err){
                 console.error("failed to get group balance: ",err)

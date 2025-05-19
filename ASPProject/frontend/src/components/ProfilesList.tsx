@@ -64,7 +64,6 @@ export default function ProfileList({group, setReloadBalance}:{group: Group, set
             try{
                 const res = await fetch(`http://localhost:5167/api/groups/${group.id}/even-balances`)
                 const data: Transaction[] = await res.json()
-                console.log("data", data)
                 setTransactionLog(data)
                 setTransactionLogOpen(true)
                 setLoadingTransactionLog(false);
@@ -128,11 +127,9 @@ export default function ProfileList({group, setReloadBalance}:{group: Group, set
         async function getTransactions(){
             setOpenTransactionView(false)
             try{
-                console.log("groupId", groupId)
-                console.log("profileId", profileId)
+               
                 const res = await fetch(`http://localhost:5167/api/transaction/group/${groupId}/profile/${profileId}`)
                 const data: Transaction[] = await res.json()
-                console.log("data", data)
                 setTransactions(data)
                 setActiveProfileId(profileId)
                 setOpenTransactionView(true)
@@ -147,7 +144,6 @@ export default function ProfileList({group, setReloadBalance}:{group: Group, set
     function handleCreateTransaction(amount: number, profileId: number, name: string, recipientProfileId?: number){
         async function createTransaction(){
             try{
-                console.log("recipientProfileId", recipientProfileId)
                 const transaction: any = {
                     groupId: group.id,
                     profileId: profileId,
@@ -165,7 +161,6 @@ export default function ProfileList({group, setReloadBalance}:{group: Group, set
                     body: JSON.stringify(transaction)
                 })
                 const data: Transaction = await res.json()
-                console.log("data", data)
                 setReloadBalance(true)
                 setReloadSums(true)
                 setOpenTransactionCreate(false)
@@ -189,7 +184,7 @@ export default function ProfileList({group, setReloadBalance}:{group: Group, set
                     <div className="flex flex-wrap ">
                         <div className="flex gap-4 p-3 mx-auto">
                             {
-                                header.map(h => <p className="font-bold w-40">{h}</p>)
+                                header.map((h,i) => <p key={i} className="font-bold w-40">{h}</p>)
                             }
                         </div>
                     </div>
@@ -197,7 +192,6 @@ export default function ProfileList({group, setReloadBalance}:{group: Group, set
                     <div className="flex flex-wrap ">
                     {
                     profiles.map(p=>{
-                        console.log(p)
                         return(
                             <div className="flex gap-4 p-3 mx-auto" key={p.profileId}>
                                 <p className="truncate w-40">{p.name}</p>

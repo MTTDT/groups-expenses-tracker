@@ -125,10 +125,9 @@ export default function AddProfile({setAddGroupVisible, setGroup, group}:
                             {
                                 profiles.map(p=>{
                                     if(p.name.toLowerCase().includes(search.toLowerCase()))
-                                        console.log(p)
-                                                    console.log("selectedProfiles", selectedProfiles)
+                                      
                                     return (
-                                        <div className="flex w-full items-center justify-between hover:bg-slate-200 cursor-pointer">
+                                        <div className="flex w-full items-center justify-between hover:bg-slate-200 cursor-pointer" key={p.profileId}>
                                             <div className="flex-grow p-2"
                                                 onClick={() => {
                                                     if (!selectedProfiles.some(selected => selected.id === p.id)) {

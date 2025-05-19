@@ -119,7 +119,7 @@ export default function CreateGroupCard({setAddGroupVisible, setGroups, groups,}
                                 profiles.map(p=>{
                                     if(p.name.toLowerCase().includes(search.toLowerCase()))
                                     return (
-                                        <div className="flex w-full items-center justify-between hover:bg-slate-200 cursor-pointer">
+                                        <div className="flex w-full items-center justify-between hover:bg-slate-200 cursor-pointer" key={p.id}>
                                             <div className="flex-grow p-2"
                                                 onClick={()=>{
                                                     console.log(p)
